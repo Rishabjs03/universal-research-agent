@@ -29,9 +29,13 @@ Built using:
 ## 🏗️ Project Structure
 
 ai-multi-tool-agent/
+
 ├── main.py
+
 └── src/
+
 ├── agent.py
+
 └── tools.py
 
 ---
@@ -74,7 +78,9 @@ python main.py
 ## 🧪 Example Prompts
 
 -Search the current population of India, China and USA. Then use Python to calculate ratios.
+
 -Search latest AI news from 48 hours and summarize the top 3 factual updates.
+
 -Read this URL https://bbc.com/news/world-us-canada-67195422 and give a 5-point summary.
 
 
