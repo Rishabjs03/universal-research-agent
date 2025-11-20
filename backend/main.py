@@ -4,13 +4,17 @@ from src.agents import build_agent
 
 load_dotenv()
 
+# checking the api key
 if not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY"):
     print("Error: Please set OPENAI_API_KEY and TAVILY_API_KEY in .env file")
     exit(1)
 
+# main executor function
 def main():
     print("🤖 Multi-Tool Research Agent — ready.")
     print("Type 'exit' or CTRL+C to quit.")
+
+    # calling the agent executor
     agent_executor = build_agent()
 
     while True:

@@ -5,4 +5,4 @@ langchain-experimental
 tavily-python
 python-dotenv
 requests
-langchain-hub
+
