@@ -5,4 +5,8 @@ langchain-experimental
 tavily-python
 python-dotenv
 requests
-
+openai
+playsound
+SpeechRecognition
+pyaudio
+pillow

@@ -1,96 +1,138 @@
-#Universal-Research-Agent
 
-A fully autonomous AI agent that can:
+# 🌐 Universal Research Agent + Voice Mode + Image Generation
 
-- 🔍 Search the web (Tavily)
-- 📄 Read & analyze URLs
-- 🧮 Run Python code for calculations
-- 🧠 Use tool-calling LLM reasoning
-- 🔁 Perform multi-step research loops
+An advanced multi-tool AI agent capable of Web Search, Data Analysis, Image Generation, and Real-Time Voice Interaction with interruption capabilities.
 
-Built using:
-- LangChain
-- OpenAI models
-- Tavily Search API
-
----
+Powered by *LangChain*, *OpenAI GPT-4o*, *Tavily*, *Whisper*, and *Pygame*.
 
 ## 🚀 Features
 
-- Multi-tool agent execution
-- Search + URL reading + Python REPL
-- Autonomous Reason → Act → Observe loop
-- Modular tool system
-- Terminal-based interface
-- Works with GPT-4 and GPT-o models
+**🔥 Research Agent (Text Mode)**
+- 🔍 Web Search: Uses Tavily API for accurate, real-time information.
 
----
+- 🌐 URL Reading: Can scrape and summarize specific web pages.
 
+- 🧮 Python REPL: Writes and executes Python code for complex math & data logic.
+
+- 🧠 Autonomous Reasoning: Uses a "Reason → Act → Observe" loop to solve multi-step problems.
+
+**🎙️ Voice Agent (Jarvis Mode)**
+- 🗣️ Real-Time Conversation: Powered by OpenAI Whisper (STT) and GPT-4o-mini-TTS.
+
+- 🎧 Smooth Playback: Uses pygame for seamless audio handling.
+
+- 🧠 Hands-Free: Full voice-controlled research assistant.
+
+
+**🖼️ Image Generation**
+- 🎨 AI Creativity: Integrated DALL-E 3 support.
+
+- 👁️ Auto-Display: Generates and automatically opens images on your screen.
 ## 🏗️ Project Structure
 
-ai-multi-tool-agent/
-
-├── main.py
-
+```bash
+universal-research-agent/
+│
+├── main.py               # 🖥️ Text-mode terminal agent
+├── voice_agent.py        # 🎙️ Voice-enabled (Jarvis) agent
+│
 └── src/
+    ├── agent.py          # 🧠 LLM + tool-calling logic
+    └── tools.py          # 🛠️ Search, Python REPL, URL fetcher, Image Gen
+│
+├── .env.example          # 🔑 Environment variable template
+├── requirements.txt      # 📦 Project dependencies
+└── README.md             # 📄 Documentation
 
-├── agent.py
-
-└── tools.py
-
----
-
+```
 ## 🔧 Setup
 
-### 1. Clone Repo
+**1️⃣ Clone the Repository**
+```bash
 git clone https://github.com/Rishabjs03/universal-research-agent.git
-cd backend
+cd universal-research-agent
+```
+**2️⃣ Create Virtual Environment**
 
+ *macOS / Linux:*
 
-### 2. Create Virtual Environment
-
+```bash
 python -m venv .venv
-source .venv/bin/activate # mac/linux
-..venv\Scripts\activate # windows
+source .venv/bin/activate
+```
+*Windows:*
 
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-### 3. Install Dependencies
-
+**3️⃣ Install Dependencies**
+```bash
 pip install -r requirements.txt
+```
+
+**4️⃣ Configure Environment Variables**
+
+*Create a .env file in the root directory and add your API keys:*
+
+```bash
+# Create .env file
+cp .env.example .env
+```
+
+*Add your keys inside .env:*
+```bash
+OPENAI_API_KEY=sk-your-openai-key
+TAVILY_API_KEY=tvly-your-tavily-key
+```
 
 
-### 4. Configure Environment Variables
+## ▶️ Usage
 
-Copy `.env.example` → `.env` and add:
-OPENAI_API_KEY=your-key
-TAVILY_API_KEY=your-key
+**🖥️ Run Text Mode (Terminal Agent)**
 
+- Best for coding, debugging, and silent research.
 
----
-
-## ▶️ Run the Agent
-
+```bash
 python main.py
+```
+
+**🎙️ Run Voice Mode (Jarvis Agent)**
+
+- Best for hands-free interaction. Headphones recommended to prevent audio feedback loops.
+
+```bash
+python voice_agent.py
+```
 
 
----
+## 🧠 Tech Stack
 
-## 🧪 Example Prompts
+- **LLM:** OpenAI GPT-4o / GPT-4o-mini
 
--Search the current population of India, China and USA. Then use Python to calculate ratios.
+- **Framework:** LangChain (Agents & Tools)
 
--Search latest AI news from 48 hours and summarize the top 3 factual updates.
+- **Search:** Tavily API
 
--Read this URL https://bbc.com/news/world-us-canada-67195422 and give a 5-point summary.
+- **Voice (STT):** OpenAI Whisper-1
+
+- **Voice (TTS):** OpenAI TTS-1
+
+- **Audio Engine:** Pygame (for interruptible playback)
+
+- **Vision/Image:** DALL-E 3 & OpenCV
 
 
----
 
-## 📜 License
-MIT License – free to modify and use.
+## License
 
----
+This project is licensed under the MIT License – free to use, modify, and distribute.
+## Support
 
-## ⭐ Support
-Star the repo if you like this project!
+**if you find this project useful, please give it a Star ⭐ on GitHub!**
+
+- 🐛 **Report Issues:** Issues Tab
+
+- 🤝 **Contribute:** Pull requests are welcome!
 
