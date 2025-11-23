@@ -1,8 +1,14 @@
+
 import os
 from dotenv import load_dotenv
 from src.agents import build_agent
 
+
+
 load_dotenv()
+
+
+
 
 # checking the api key
 if not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY"):

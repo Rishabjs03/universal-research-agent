@@ -18,6 +18,7 @@ def get_search_tool():
 def get_python_repl_tool():
 
     return PythonREPLTool(
+         name="python_repl",
         description="Run Python code to perform calculations and data processing."
     )
 
@@ -35,6 +36,8 @@ def fetch_url_content(url: str) -> str:
         return text[:4000] + ("..." if len(text) > 4000 else "")
     except Exception as e:
         return f"Error reading URL: {e}"
+
+
 
 @tool
 def generate_image(prompt: str):

@@ -10,3 +10,5 @@ playsound
 SpeechRecognition
 pyaudio
 pillow
+fastapi
+uvicorn
