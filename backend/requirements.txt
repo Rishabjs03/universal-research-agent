@@ -12,3 +12,4 @@ pyaudio
 pillow
 fastapi
 uvicorn
+python-multipart
