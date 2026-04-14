@@ -17,7 +17,7 @@ if not os.getenv("OPENAI_API_KEY") or not os.getenv("TAVILY_API_KEY"):
 
 # main executor function
 def main():
-    print("🤖 Multi-Tool Research Agent — ready.")
+    print("Multi-Tool Research Agent — ready.")
     print("Type 'exit' or CTRL+C to quit.")
 
     # calling the agent executor
